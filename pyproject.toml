@@ -1,0 +1,25 @@
+[project]
+name = "lsb-watermark"
+version = "0.1.0"
+description = "Invisible LSB watermark IDs for images: embed, verify with a checksum, and search folders or web pages for marked copies"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Levent Çeliksan"}]
+dependencies = ["pillow>=9.1", "numpy>=1.21", "requests>=2.28", "beautifulsoup4>=4.11"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+lsb-watermark = "lsb_watermark.cli:main"
+
+[project.gui-scripts]
+lsb-watermark-gui = "lsb_watermark.gui:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["lsb_watermark"]
