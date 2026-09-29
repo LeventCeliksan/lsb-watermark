@@ -1,5 +1,7 @@
 # lsb-watermark
 
+[![tests](https://github.com/LeventCeliksan/lsb-watermark/actions/workflows/tests.yml/badge.svg)](https://github.com/LeventCeliksan/lsb-watermark/actions/workflows/tests.yml)
+
 Hide a short ID (an owner code, asset number or customer reference) inside an image's pixels, read it back with a checksum, and **search a folder tree or a web page for images that carry it**.
 
 The ID goes into the least significant bit of each red, green and blue value, so every pixel changes by at most 1 and the image looks identical. A tiny header and a SHA-256 checksum make sure random images never produce false matches.
